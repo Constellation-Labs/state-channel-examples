@@ -7,9 +7,18 @@ object Dependencies {
     val kindProjector = "0.13.2"
     val organizeImports = "0.5.0"
     val semanticDB = "4.5.9"
+    val tessellation = "0.10.0"
   }
 
   object Libraries {
+
+    def tessellation(artifact: String) =
+      ("org.constellation" %% s"tessellation-${artifact}" % V.tessellation).from(
+        s"https://github.com/Constellation-Labs/tessellation/releases/download/v${V.tessellation}/cl-node.jar"
+      )
+
+    val tessellationSdk = tessellation("sdk")
+
 
     // Scalafix rules
     val organizeImports = "com.github.liancheng" %% "organize-imports" % V.organizeImports

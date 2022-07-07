@@ -46,6 +46,7 @@ lazy val stateChannel = (project in file("modules/state-channel"))
     scalafixCommonSettings,
     commonSettings,
     libraryDependencies ++= Seq(
+      Libraries.tessellationSdk,
       CompilerPlugin.kindProjector,
       CompilerPlugin.betterMonadicFor,
       CompilerPlugin.semanticDB

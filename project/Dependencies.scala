@@ -17,6 +17,7 @@ object Dependencies {
         s"https://github.com/Constellation-Labs/tessellation/releases/download/v${V.tessellation}/cl-node.jar"
       )
 
+    val tessellationCore = tessellation("core")
     val tessellationSdk = tessellation("sdk")
 
 

@@ -46,6 +46,8 @@ lazy val stateChannel = (project in file("modules/state-channel"))
     scalafixCommonSettings,
     commonSettings,
     libraryDependencies ++= Seq(
+      Libraries.http4sDsl,
+      Libraries.http4sEmberClient,
       Libraries.tessellationSdk,
       CompilerPlugin.kindProjector,
       CompilerPlugin.betterMonadicFor,

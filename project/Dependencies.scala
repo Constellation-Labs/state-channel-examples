@@ -4,6 +4,7 @@ object Dependencies {
 
   object V {
     val betterMonadicFor = "0.3.1"
+    val http4s = "0.23.13"
     val kindProjector = "0.13.2"
     val organizeImports = "0.5.0"
     val semanticDB = "4.5.9"
@@ -17,8 +18,13 @@ object Dependencies {
         s"https://github.com/Constellation-Labs/tessellation/releases/download/v${V.tessellation}/cl-node.jar"
       )
 
+    def http4s(artifact: String) = "org.http4s" %% s"http4s-$artifact" % V.http4s
+
+    val http4sDsl = http4s("dsl")
+    val http4sEmberClient = http4s("ember-client")
     val tessellationCore = tessellation("core")
     val tessellationSdk = tessellation("sdk")
+    
 
 
     // Scalafix rules

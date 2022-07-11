@@ -16,3 +16,4 @@ metals.sbt
 .bloop
 .metals/
 .bsp/
+*.p12
